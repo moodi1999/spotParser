@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import json
 import re
 import glob
+from path import path
 from collections import namedtuple
 import urllib.request
 import urllib.error
@@ -54,11 +55,31 @@ async def getIdsAndTokens(browser, url):
     return result
 
 
-async def getTrackIdAndToken(trackPageUrl):
+async def getTrackIdAndToken(trackPageUrls):
     browser = await get_browser()
-    params: dict = await getIdsAndTokens(browser, trackPageUrl)
-    params.update({"audioToken": getAudioToken(params)})
-    return params
+
+    downloadLinks: list = []
+    for url in trackPageUrls:
+        result: dict = await getIdsAndTokens(browser, url)
+        result.update({"audioToken": getAudioToken(result)})
+        
+        link = "https://mp3pro.xyz/download?"
+        tId = "v=" + result['trackId'] + "&"
+        audioToken = "t=" + result['audioToken'] + "&"
+        f = "f=" + str(0) + "&"
+        d = "d=" + str(0) + "&"
+        r = "r=" + result['url'] + "&"
+        b = "b=" + str(320) + "&"
+        underLine = "_=" + str(0) + "&"
+        cid = "cid=" + ""
+
+        downloadLink = link + tId + audioToken + f + d + r + b + underLine + cid
+        downloadLinks.append(downloadLink)
+
+        downloadJsonLinks = json.dumps(downloadLinks)
+        path('tracksDownloadUrl.txt').write_bytes(downloadJsonLinks.encode())
+
+    return downloadLinks
 
 
 def getAudioToken(headerParams):

@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import json
 import re
 import glob
+from path import path
 from collections import namedtuple
 import urllib.request
 import urllib.error
@@ -20,24 +21,17 @@ if __name__ == "__main__":
     url = 'https://open.spotify.com/playlist/5KhkvPjNVE3dOtvvAo6IWC?si=BYohF3T0SGyV4LGzKfhgCA'
     searchKeys = getTrackSearchKey(url)
 
-    # for key in searchKeys:
-    pageUrl = getTrackPage(searchKeys[0])
+    tracksPageUrl:list = []
+    for key in searchKeys:
+        pageUrl = getTrackPage(key)
+        tracksPageUrl.append(pageUrl)
+    
+    pageUrls = json.dumps(tracksPageUrl)
+    path('trackUrls.txt').write_bytes(pageUrls.encode())
+
     loop = asyncio.get_event_loop()
-    result = loop.run_until_complete(getTrackIdAndToken(pageUrl))
+    result = loop.run_until_complete(getTrackIdAndToken(tracksPageUrl))
 
-    link = "https://mp3pro.xyz/download?"
-    tId = "v=" + result['trackId'] + "&"
-    audioToken = "t=" + result['audioToken'] + "&"
-    f = "f=" + str(0) + "&"
-    d = "d=" + str(0) + "&"
-    r = "r=" + result['url'] + "&"
-    b = "b=" + str(320) + "&"
-    underLine = "_=" + str(0) + "&"
-    cid = "cid=" + ""
-
-    downloadLink = link + tId + audioToken + f + d + r + b + underLine + cid
-
-    print(downloadLink)
     # https://mp3pro.xyz/download?
     # v=COOBN-cdJbo&
     # t=d0277824e713bae3af32fd50c75bf82f&
