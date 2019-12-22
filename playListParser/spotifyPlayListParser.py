@@ -3,7 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import re
-from path import path
 import glob
 from collections import namedtuple
 import urllib.request
