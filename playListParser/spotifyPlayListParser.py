@@ -26,16 +26,23 @@ def getTrackSearchKey(url):
 
     trackSearchKey: list = []
     for item in items:
-        artistName = item['track']['artists'][0]['name']
-        trackName = item['track']['name']
-        trackSearchKey.append(artistName + " " + trackName)
+        if (dataDic['type'] == 'album'):
+            artistName = item['artists'][0]['name']
+            trackName = item['name']
+            trackSearchKey.append(artistName + " " + trackName)
+        else:
+            artistName = item['track']['artists'][0]['name']
+            trackName = item['track']['name']
+            trackSearchKey.append(artistName + " " + trackName)
     
     return trackSearchKey
 
 if __name__ == "__main__":
     
     url = 'https://open.spotify.com/playlist/5KhkvPjNVE3dOtvvAo6IWC?si=BYohF3T0SGyV4LGzKfhgCA'
+    url = 'https://open.spotify.com/album/0S0KGZnfBGSIssfF54WSJh'
     searchKeys = getTrackSearchKey(url)
 
     tracks = json.dumps(searchKeys)
+    txtFiles = glob.glob('**/*.txt', recursive=True)
     path('trackSearchKey.txt').write_bytes(tracks.encode())

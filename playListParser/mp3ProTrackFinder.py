@@ -125,7 +125,7 @@ if __name__ == "__main__":
     txtFiles = glob.glob('**/*.txt', recursive=True)
     trackUrlsPath = ""
     for f in txtFiles:
-        if 'trackUrls.txt' == f:
+        if 'trackPageUrls.txt' == f:
             trackUrlsPath = f
     
     content = path(trackUrlsPath).bytes().decode("utf-8")
