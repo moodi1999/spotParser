@@ -13,6 +13,16 @@ from pyppeteer import launch
 from requests import Session
 
 
+def getTrackPage(trackSearchKey):
+    searchKeyWork = trackSearchKey.replace(" ", "-")
+    url = "https://mp3paw.com/mp3-download/" + searchKeyWork
+    resp = requests.get(url)
+    soup = BeautifulSoup(resp.text, 'html.parser')
+    trackId = re.findall(
+        r"\s*content\=\"https:\/\/img\.youtube\.com\/vi\/([\s\S]*?)\/maxresdefault\.jpg\"", str(soup))[0]
+    return "https://mp3pro.xyz/" + trackId
+
+
 async def get_browser():
     return await launch({"headless": False})
 
@@ -33,6 +43,7 @@ async def getIdsAndTokens(browser, url):
         r"\"token\"\:\"([\s\S]*?\:[\s\S]*?)\"", str(soup))[0]
 
     result = {
+        "url": url,
         "trackId": str(ajaxCookieIdAndToken.split(":")[0]),
         "token": str(ajaxCookieIdAndToken.split(":")[1]),
         "__cfduid": str(cookie[0]['value']),
@@ -45,9 +56,9 @@ async def getIdsAndTokens(browser, url):
 
 async def getTrackIdAndToken(trackPageUrl):
     browser = await get_browser()
-    params = await getIdsAndTokens(browser, trackPageUrl)
-    getAudioToken(params)
-    return 
+    params: dict = await getIdsAndTokens(browser, trackPageUrl)
+    params.update({"audioToken": getAudioToken(params)})
+    return params
 
 
 def getAudioToken(headerParams):
@@ -73,15 +84,5 @@ def getAudioToken(headerParams):
         }
     )
     idAndToken = json.loads(str(response.text))
-    trackId = idAndToken['audio'].split(":")[0]
     audioToken = idAndToken['audio'].split(":")[1]
-    return {"trackId": trackId, "audioToken": audioToken}
-
-def getTrackPage(trackSearchKey):
-    searchKeyWork = trackSearchKey.replace(" ", "-")
-    url = "https://mp3paw.com/mp3-download/" + searchKeyWork
-    resp = requests.get(url)
-    soup = BeautifulSoup(resp.text, 'html.parser')
-    trackId = re.findall(
-        r"\s*content\=\"https:\/\/img\.youtube\.com\/vi\/([\s\S]*?\:[\s\S]*?)\/maxresdefault\.jpg\"", str(soup))[0]
-    return "https://mp3pro.xyz/" + trackId
+    return audioToken
