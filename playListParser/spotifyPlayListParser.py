@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import json
 import re
 import glob
+from path import path
 from collections import namedtuple
 import urllib.request
 import urllib.error
@@ -30,3 +31,11 @@ def getTrackSearchKey(url):
         trackSearchKey.append(artistName + " " + trackName)
     
     return trackSearchKey
+
+if __name__ == "__main__":
+    
+    url = 'https://open.spotify.com/playlist/5KhkvPjNVE3dOtvvAo6IWC?si=BYohF3T0SGyV4LGzKfhgCA'
+    searchKeys = getTrackSearchKey(url)
+
+    tracks = json.dumps(searchKeys)
+    path('trackSearchKey.txt').write_bytes(tracks.encode())

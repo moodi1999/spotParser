@@ -13,15 +13,16 @@ import asyncio
 from pyppeteer import launch
 from requests import Session
 
+def patch_pyppeteer():
+    import pyppeteer.connection
+    original_method = pyppeteer.connection.websockets.client.connect
 
-def getTrackPage(trackSearchKey):
-    searchKeyWork = trackSearchKey.replace(" ", "-")
-    url = "https://mp3paw.com/mp3-download/" + searchKeyWork
-    resp = requests.get(url)
-    soup = BeautifulSoup(resp.text, 'html.parser')
-    trackId = re.findall(
-        r"\s*content\=\"https:\/\/img\.youtube\.com\/vi\/([\s\S]*?)\/maxresdefault\.jpg\"", str(soup))[0]
-    return "https://mp3pro.xyz/" + trackId
+    def new_method(*args, **kwargs):
+        kwargs['ping_interval'] = None
+        kwargs['ping_timeout'] = None
+        return original_method(*args, **kwargs)
+
+    pyppeteer.connection.websockets.client.connect = new_method
 
 
 async def get_browser():
@@ -36,6 +37,7 @@ async def get_page(browser, url):
 
 async def getIdsAndTokens(browser, url):
     page = await get_page(browser, url)
+    print("opened " + url)
     cookie = await page.cookies()
 
     content = await page.content()
@@ -52,6 +54,8 @@ async def getIdsAndTokens(browser, url):
         "_ga": str(cookie[2]['value']),
         "_gat_gtag_UA_154873324_1": str(cookie[3]['value'])
     }
+    print("closingPage")
+    await page.close()
     return result
 
 
@@ -60,24 +64,31 @@ async def getTrackIdAndToken(trackPageUrls):
 
     downloadLinks: list = []
     for url in trackPageUrls:
-        result: dict = await getIdsAndTokens(browser, url)
-        result.update({"audioToken": getAudioToken(result)})
-        
-        link = "https://mp3pro.xyz/download?"
-        tId = "v=" + result['trackId'] + "&"
-        audioToken = "t=" + result['audioToken'] + "&"
-        f = "f=" + str(0) + "&"
-        d = "d=" + str(0) + "&"
-        r = "r=" + result['url'] + "&"
-        b = "b=" + str(320) + "&"
-        underLine = "_=" + str(0) + "&"
-        cid = "cid=" + ""
+        try:
+            print("getting data for " + url)
 
-        downloadLink = link + tId + audioToken + f + d + r + b + underLine + cid
-        downloadLinks.append(downloadLink)
+            result: dict = await getIdsAndTokens(browser, url)
+            result.update({"audioToken": getAudioToken(result)})
+            
+            link = "https://mp3pro.xyz/download?"
+            tId = "v=" + result['trackId'] + "&"
+            audioToken = "t=" + result['audioToken'] + "&"
+            f = "f=" + str(0) + "&"
+            d = "d=" + str(0) + "&"
+            r = "r=" + result['url'] + "&"
+            b = "b=" + str(320) + "&"
+            underLine = "_=" + str(0) + "&"
+            cid = "cid=" + ""
 
-        downloadJsonLinks = json.dumps(downloadLinks)
-        path('tracksDownloadUrl.txt').write_bytes(downloadJsonLinks.encode())
+            downloadLink = link + tId + audioToken + f + d + r + b + underLine + cid
+            print("got download link for " + url + "  -> " + downloadLink)
+            downloadLinks.append(downloadLink)
+
+            downloadJsonLinks = json.dumps(downloadLinks)
+            path('tracksDownloadUrl.txt').write_bytes(downloadJsonLinks.encode())
+        except Exception as e:
+            msg = "error for " + url + "Exception is:\n %s \n" % e
+            print(msg)
 
     return downloadLinks
 
@@ -107,3 +118,30 @@ def getAudioToken(headerParams):
     idAndToken = json.loads(str(response.text))
     audioToken = idAndToken['audio'].split(":")[1]
     return audioToken
+
+
+if __name__ == "__main__":
+    
+    txtFiles = glob.glob('**/*.txt', recursive=True)
+    trackUrlsPath = ""
+    for f in txtFiles:
+        if 'trackUrls.txt' == f:
+            trackUrlsPath = f
+    
+    content = path(trackUrlsPath).bytes().decode("utf-8")
+    tracksPageUrl = json.loads(content)
+
+    patch_pyppeteer()
+
+    loop = asyncio.get_event_loop()
+    result = loop.run_until_complete(getTrackIdAndToken(tracksPageUrl))
+
+    # https://mp3pro.xyz/download?
+    # v=COOBN-cdJbo&
+    # t=d0277824e713bae3af32fd50c75bf82f&
+    # f=0&
+    # d=0&
+    # r=https%3A%2F%2Fmp3pro.xyz%2FCOOBN-cdJbo&
+    # b=320&
+    # _=1577007959990&
+    # cid=1397400876.1569142253
