@@ -1,0 +1,393 @@
+{
+    "album_type": "album",
+    "artists": [{
+        "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+        "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+        "name": "Billie Eilish",
+        "type": "artist",
+        "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+    }],
+    "genres": [],
+    "images": [{
+        "height": 300,
+        "url": "https:\/\/i.scdn.co\/image\/e31ade267f31182d0690ee9debefaabfefc29860",
+        "width": 300
+    }],
+    "name": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+    "release_date": "2019-03-29",
+    "tracks": {
+        "href": "https:\/\/api.spotify.com\/v1\/albums\/0S0KGZnfBGSIssfF54WSJh\/tracks?offset=0&limit=50&market=FR&locale=en",
+        "items": [{
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 13578,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/0rQtoQXQfwpDW0c7Fw1NeM"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/0rQtoQXQfwpDW0c7Fw1NeM",
+                "id": "0rQtoQXQfwpDW0c7Fw1NeM",
+                "is_local": false,
+                "is_playable": true,
+                "name": "!!!!!!!",
+                "preview_url": null,
+                "track_number": 1,
+                "type": "track",
+                "uri": "spotify:track:0rQtoQXQfwpDW0c7Fw1NeM"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "name": "bad guy",
+                "type": "track",
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 243725,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/4QIo4oxwzzafcBWkKjDpXY"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/4QIo4oxwzzafcBWkKjDpXY",
+                "id": "4QIo4oxwzzafcBWkKjDpXY",
+                "is_local": false,
+                "is_playable": true,
+                "name": "xanny",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/5fd6ab983596b744017ac43471810ca810eba0e5?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 3,
+                "type": "track",
+                "uri": "spotify:track:4QIo4oxwzzafcBWkKjDpXY"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 180952,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/3XF5xLJHOQQRbWya6hBp7d"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/3XF5xLJHOQQRbWya6hBp7d",
+                "id": "3XF5xLJHOQQRbWya6hBp7d",
+                "is_local": false,
+                "is_playable": true,
+                "name": "you should see me in a crown",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/9670fda6c30abbced8a997fa42528c16a85952e4?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 4,
+                "type": "track",
+                "uri": "spotify:track:3XF5xLJHOQQRbWya6hBp7d"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 168839,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/6IRdLKIyS4p7XNiP8r6rsx"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/6IRdLKIyS4p7XNiP8r6rsx",
+                "id": "6IRdLKIyS4p7XNiP8r6rsx",
+                "is_local": false,
+                "is_playable": true,
+                "name": "all the good girls go to hell",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/434b270fdd3f3e889e6cd07a2b8d08f77e0ae5ae?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 5,
+                "type": "track",
+                "uri": "spotify:track:6IRdLKIyS4p7XNiP8r6rsx"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 221543,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/3Fj47GNK2kUF0uaEDgXLaD"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/3Fj47GNK2kUF0uaEDgXLaD",
+                "id": "3Fj47GNK2kUF0uaEDgXLaD",
+                "is_local": false,
+                "is_playable": true,
+                "name": "wish you were gay",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/b356446fa6765a17f64a5bfad8a23bf1ce85a5ab?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 6,
+                "type": "track",
+                "uri": "spotify:track:3Fj47GNK2kUF0uaEDgXLaD"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 196077,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/43zdsphuZLzwA9k4DJhU0I"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/43zdsphuZLzwA9k4DJhU0I",
+                "id": "43zdsphuZLzwA9k4DJhU0I",
+                "is_local": false,
+                "is_playable": true,
+                "name": "when the party's over",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/3ecac85b0a9e25bfb3ff85ab96c9d09ab164cb7b?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 7,
+                "type": "track",
+                "uri": "spotify:track:43zdsphuZLzwA9k4DJhU0I"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 173201,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/6X29iaaazwho3ab7GNue5r"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/6X29iaaazwho3ab7GNue5r",
+                "id": "6X29iaaazwho3ab7GNue5r",
+                "is_local": false,
+                "is_playable": true,
+                "name": "8",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/584388395750c06c6540541938a6cda2ece7347b?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 8,
+                "type": "track",
+                "uri": "spotify:track:6X29iaaazwho3ab7GNue5r"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 179889,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/3Tc57t9l2O8FwQZtQOvPXK"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/3Tc57t9l2O8FwQZtQOvPXK",
+                "id": "3Tc57t9l2O8FwQZtQOvPXK",
+                "is_local": false,
+                "is_playable": true,
+                "name": "my strange addiction",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/f7a6d7d8efcd88527c89dc7f22829a0166936735?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 9,
+                "type": "track",
+                "uri": "spotify:track:3Tc57t9l2O8FwQZtQOvPXK"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 193143,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/4SSnFejRGlZikf02HLewEF"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/4SSnFejRGlZikf02HLewEF",
+                "id": "4SSnFejRGlZikf02HLewEF",
+                "is_local": false,
+                "is_playable": true,
+                "name": "bury a friend",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/697c874cdd9cfd73e1265673f389c86ecec31165?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 10,
+                "type": "track",
+                "uri": "spotify:track:4SSnFejRGlZikf02HLewEF"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 156370,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/7qEKqBCD2vE5vIBsrUitpD"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/7qEKqBCD2vE5vIBsrUitpD",
+                "id": "7qEKqBCD2vE5vIBsrUitpD",
+                "is_local": false,
+                "is_playable": true,
+                "name": "ilomilo",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/0c231d89ded60a722669930c17211b0cb9186b2d?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 11,
+                "type": "track",
+                "uri": "spotify:track:7qEKqBCD2vE5vIBsrUitpD"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 242652,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/0tMSssfxAL2oV8Vri0mFHE"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/0tMSssfxAL2oV8Vri0mFHE",
+                "id": "0tMSssfxAL2oV8Vri0mFHE",
+                "is_local": false,
+                "is_playable": true,
+                "name": "listen before i go",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/df162bfd0308709df1f358567a5c5e83a0bfaf8b?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 12,
+                "type": "track",
+                "uri": "spotify:track:0tMSssfxAL2oV8Vri0mFHE"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 291796,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/6CcJMwBtXByIz4zQLzFkKc"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/6CcJMwBtXByIz4zQLzFkKc",
+                "id": "6CcJMwBtXByIz4zQLzFkKc",
+                "is_local": false,
+                "is_playable": true,
+                "name": "i love you",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/06503729fb99a9072fe40c9d529743eb4c9f6a59?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 13,
+                "type": "track",
+                "uri": "spotify:track:6CcJMwBtXByIz4zQLzFkKc"
+            },
+            {
+                "artists": [{
+                    "external_urls": {
+                        "spotify": "https:\/\/open.spotify.com\/artist\/6qqNVTkY8uBg9cP3Jd7DAH"
+                    },
+                    "href": "https:\/\/api.spotify.com\/v1\/artists\/6qqNVTkY8uBg9cP3Jd7DAH",
+                    "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                    "name": "Billie Eilish",
+                    "type": "artist",
+                    "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                }],
+                "disc_number": 1,
+                "duration_ms": 119409,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https:\/\/open.spotify.com\/track\/3LgWsmilsrWXiPYQFRD0T7"
+                },
+                "href": "https:\/\/api.spotify.com\/v1\/tracks\/3LgWsmilsrWXiPYQFRD0T7",
+                "id": "3LgWsmilsrWXiPYQFRD0T7",
+                "is_local": false,
+                "is_playable": true,
+                "name": "goodbye",
+                "preview_url": "https:\/\/p.scdn.co\/mp3-preview\/e4358e41d21cdb8bb1c60b261371fa4bf6323ed0?cid=a46f5c5745a14fbf826186da8da5ecc3",
+                "track_number": 14,
+                "type": "track",
+                "uri": "spotify:track:3LgWsmilsrWXiPYQFRD0T7"
+            }
+        ],
+        "limit": 50,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total": 14
+    },
+    "type": "album",
+}
